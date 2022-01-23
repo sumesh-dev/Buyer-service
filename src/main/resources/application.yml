@@ -1,0 +1,29 @@
+server:
+  port: ${PORT:9002}
+
+spring:
+  application:
+    name: buyer-service
+  data:
+    mongodb:
+      uri: ${MONGODB_URL}
+#      host: localhost
+#      port: 27017
+#      database: ecommerce
+
+eureka:
+  instance:
+    hostname: ${APPDOMAIN:localhost}
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_URL:http://127.0.0.1:8761/eureka/}
+
+jwt:
+  secret: "asdfghjkikjuhygfrd"
+
+
+Feign:
+  Product_url: ${PRODUCT_SERVICE_URL:http://inventory-service/product}
+
+allowed:
+  origin: ${REACT_APP_URL:http://localhost:3000}
