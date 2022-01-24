@@ -7,9 +7,6 @@ spring:
   data:
     mongodb:
       uri: ${MONGODB_URL}
-#      host: localhost
-#      port: 27017
-#      database: ecommerce
 
 eureka:
   instance:
