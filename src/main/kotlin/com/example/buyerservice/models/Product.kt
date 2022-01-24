@@ -9,4 +9,4 @@ data class Product(
     var price: Int,
     var desc: String,
     var addBy: String,
-    var review: MutableList<Review>)
+    var review: MutableList<Review>?)
