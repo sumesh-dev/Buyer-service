@@ -8,10 +8,10 @@ import java.net.URI
 
 
 //@FeignClient(url="http://localhost:9003/product", name = "PRODUCT-CLIENT")
-@FeignClient(name = "PRODUCT-CLIENT")
+@FeignClient(url="http://inventory-service.eba-2kbtwhiu.us-east-1.elasticbeanstalk.com/product",name = "PRODUCT-CLIENT")
 interface ProductClient {
 
     @GetMapping("/getProduct/{id}")
-    fun getProduct(baseUrl: URI, @PathVariable(name = "id") id : String) :Product
+    fun getProduct(@PathVariable(name = "id") id : String) :Product
 
 }

@@ -58,7 +58,7 @@ class CartServiceImpl: CartService {
         val cartProduct: MutableList<ObjectId>? = userRepository.findByEmail(email)?.productInCart
         if (cartProduct != null) {
             for (product_id in cartProduct) {
-                var product = productClient.getProduct(productUrl,product_id.toString())
+                var product = productClient.getProduct(product_id.toString())
                     list.add(product)
             }
 //            println(list)
